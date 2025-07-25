@@ -10,6 +10,9 @@ class AppConfig {
   String get loginEndpoint => '$baseUrl/auth/login';
   String get registerEndpoint => '$baseUrl/auth/register';
 
+  //dummy json
+  String get todoEndpoint => 'http://dummyjson.com/todos';
+
   // Course endpoints
   String get getAllCoursesEndpoint => '$baseUrl/course';
   String getCourseDetails(int id) => '$baseUrl/course/$id';

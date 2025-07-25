@@ -17,7 +17,6 @@ class AuthController with ChangeNotifier {
   final AuthService _authservice = AuthService();
 
   void login(BuildContext context) async {
-    print("funtion");
     final email = emailController.text.trim();
     final password = passwordController.text;
     final results = await _authservice.logIn(email: email, password: password);
@@ -25,7 +24,7 @@ class AuthController with ChangeNotifier {
       // Save the access token to shared preferences
       final token = results['data']['access_token'];
       await LocalStorageService.saveString('access_token', token);
-      context.go('/browse');
+      context.go('/home');
       ScaffoldMessenger.of(context)
         ..hideCurrentSnackBar()
         ..showSnackBar(

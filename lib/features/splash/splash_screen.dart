@@ -24,7 +24,7 @@ class _SplashScreenState extends State<SplashScreen> {
     await Future.delayed(const Duration(seconds: 2));
     if (mounted) {
       if (token != null && token.isNotEmpty) {
-        context.go('/browse');
+        context.go('/home');
       } else {
         context.go('/');
       }
@@ -41,13 +41,6 @@ class _SplashScreenState extends State<SplashScreen> {
           child: Row(
             children: [
               Spacer(),
-              Image.asset(
-                'assets/images/owlIcon.png',
-                width: 50, // or any size you prefer
-                height: 50,
-                // fit: BoxFit.cover,
-              ),
-
               // Text in front of the image
               Text(
                 "educatro",
