@@ -10,7 +10,7 @@ class BaseApiService {
     print("ENDOIIUNT: $endpoint");
     try {
       final response = await _client
-          .get(Uri.parse(endpoint), headers: _config.defaultHeaders)
+          .get(Uri.parse(endpoint))
           .timeout(_config.connectionTimeout);
       return _handleResponse(response);
     } catch (e) {
