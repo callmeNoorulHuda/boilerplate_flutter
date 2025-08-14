@@ -5,6 +5,7 @@ import 'package:provider/provider.dart';
 import 'core/theme/theme.dart';
 import 'core/routing/router.dart';
 import 'providers/theme_provider.dart';
+import 'features/home/controller/product_controller.dart';
 import 'services/dialog_service.dart';
 
 main() async {
@@ -22,6 +23,7 @@ class MyApp extends StatelessWidget {
       providers: [
         ChangeNotifierProvider(create: (_) => ThemeProvider()),
         ChangeNotifierProvider(create: (_) => AuthController()),
+        ChangeNotifierProvider(create: (_) => ProductController()),
       ],
       child: Consumer<ThemeProvider>(
         builder: (context, themeProvider, _) {

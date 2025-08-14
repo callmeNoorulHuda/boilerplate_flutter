@@ -1,6 +1,6 @@
 import 'package:boilerplate_flutter/core/config/app_config.dart';
 import 'package:boilerplate_flutter/core/services/base_api_service.dart';
-import 'package:boilerplate_flutter/models/product_model.dart';
+import 'package:boilerplate_flutter/features/home/views/model/product_model.dart';
 
 class ProductService {
   final BaseApiService _apiService = BaseApiService();
